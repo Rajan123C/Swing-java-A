@@ -4,7 +4,7 @@ public class Button extends JFrame {
     Button() {
 
         JTextField tf = new JTextField();
-        JButton b = new JButton(new ImageIcon("t.png")); 
+        JButton b = new JButton(new ImageIcon("")); 
 
         tf.setBounds(50, 50, 150, 20);
         b.setBounds(50, 100, 95, 30);
