@@ -20,6 +20,8 @@ public class Table extends JFrame {
         t.setModel(new javax.swing.table.DefaultTableModel(data, column));
    
         add(t);       
+        add(sp);
+        
         setSize(1000, 1000);    
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
