@@ -6,49 +6,49 @@ public class Calculator extends JFrame {
         JTextField t = new JTextField();
         t.setBounds(30,60,291,40);
 
-        JButton b1 = new JButton();
+        JButton b1 = new JButton("9");
         b1.setBounds(30,100,50,30);
 
-        JButton b2 = new JButton();
+        JButton b2 = new JButton("6");
         b2.setBounds(30,140,50,30);
 
-        JButton b3 = new JButton();
+        JButton b3 = new JButton("3");
         b3.setBounds(30,180,50,30);
 
-        JButton b4 = new JButton();
+        JButton b4 = new JButton("8");
         b4.setBounds(90,100,50,30);
 
-        JButton b5 = new JButton();
+        JButton b5 = new JButton("5");
         b5.setBounds(90,140,50,30);
 
-        JButton b6 = new JButton();
+        JButton b6 = new JButton("2");
         b6.setBounds(90,180,50,30);
 
-        JButton b7 = new JButton();
+        JButton b7 = new JButton("7");
         b7.setBounds(150,100,50,30);
 
-        JButton b8 = new JButton();
+        JButton b8 = new JButton("4");
         b8.setBounds(150,140,50,30);
 
-        JButton b9 = new JButton();
+        JButton b9 = new JButton("1");
         b9.setBounds(150,180,50,30);
 
-        JButton b10 = new JButton();
+        JButton b10 = new JButton("=");
         b10.setBounds(210,100,50,30);
 
-        JButton b11 = new JButton();
+        JButton b11 = new JButton("0");
         b11.setBounds(210,140,50,30);
 
-        JButton b12 = new JButton();
+        JButton b12 = new JButton("+");
         b12.setBounds(210,180,50,30);
 
-        JButton b13 = new JButton();
+        JButton b13 = new JButton("-");
         b13.setBounds(270,100,50,30);
 
-        JButton b14 = new JButton();
+        JButton b14 = new JButton("*");
         b14.setBounds(270,140,50,30);
 
-        JButton b15 = new JButton();
+        JButton b15 = new JButton("/");
         b15.setBounds(270,180,50,30);
 
         JButton b16 = new JButton("Clear");
