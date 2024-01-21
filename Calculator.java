@@ -3,6 +3,7 @@ import javax.swing.*;
 public class Calculator extends JFrame {
     
     Calculator(){
+      
         JTextField t = new JTextField();
         t.setBounds(30,60,291,40);
 
