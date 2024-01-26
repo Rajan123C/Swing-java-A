@@ -227,17 +227,17 @@ public class Calculator2 extends JFrame {
                     ans = String.format("%,2f", r);
                     txt.setText(ans);
                 }
-                if (op=="-") {
+                else if (op=="-") {
                     r=first-secound;
                     ans = String.format("%,2f", r);
                     txt.setText(ans);
                 }
-                if (op=="*") {
+                else if (op=="*") {
                     r=first*secound;
                     ans = String.format("%,2f", r);
                     txt.setText(ans);
                 }
-                if (op=="/") {
+                else if (op=="/") {
                     r=first/secound;
                     ans = String.format("%,2f", r);
                     txt.setText(ans);
