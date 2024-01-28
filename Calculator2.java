@@ -247,7 +247,7 @@ public class Calculator2 extends JFrame {
                     txt.setText(ans);
                 }
                 else if (op=="%") {
-                    r=first%secound;
+                    r=secound*100/first;
                     ans = r.toString();
                     txt.setText(ans);
                 }
