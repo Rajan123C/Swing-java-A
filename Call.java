@@ -4,9 +4,9 @@ import java.awt.event.ActionListener;
 
 
 
-public class Call extends JFrame {
+public class call extends JFrame {
     JButton btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,btn16;
-    Call(){
+    call(){
         JTextField txt = new JTextField();
         btn1 = new JButton("9");
         btn2 = new JButton("6");
@@ -86,7 +86,7 @@ public class Call extends JFrame {
         
     }
     public static void main(String[] args) {
-        new Call();
+        new call();
 
     }
 }

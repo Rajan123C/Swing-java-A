@@ -5,12 +5,13 @@ import java.awt.event.ActionListener;
 
 
 public class Calculator2 extends JFrame {
-    JButton btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,btn16,btn17;
+    JTextField txt;
+    JButton btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,btn16,btn17,btn18;
     String backSpace,op;
-    Double first,secound,r;
+    Integer first,secound,r;
 
     Calculator2(){
-        JTextField txt = new JTextField();
+        txt = new JTextField();
         btn1 = new JButton("9");
         btn2 = new JButton("6");
         btn3 = new JButton("3");
@@ -26,27 +27,29 @@ public class Calculator2 extends JFrame {
         btn13 = new JButton("/");
         btn14 = new JButton("0");
         btn15 = new JButton("=");
+        btn18 = new JButton("%");
         btn16 = new JButton("clear");
         btn17 = new JButton("\uF0E7");
         
-        txt.setBounds(35, 10, 290, 40);
-        btn1.setBounds(35, 50, 50, 50);
-        btn2.setBounds(35, 110, 50, 50);
-        btn3.setBounds(35, 170, 50, 50);
-        btn4.setBounds(95,50 , 50, 50);
-        btn5.setBounds(95, 110, 50, 50);
-        btn6.setBounds(95, 170, 50, 50);
-        btn7.setBounds(155, 50, 50, 50);
-        btn8.setBounds(155, 110, 50, 50);
-        btn9.setBounds(155, 170, 50, 50);
-        btn10.setBounds(215, 50, 50, 50);
-        btn11.setBounds(215, 110, 50, 50);
-        btn12.setBounds(215, 170, 50, 50);
-        btn13.setBounds(275, 110, 50, 50);
-        btn14.setBounds(275, 170, 50, 50);
-        btn15.setBounds(275, 230, 50, 50);
-        btn16.setBounds(35, 230, 220, 50);
-        btn17.setBounds(275,50,50,50);
+        txt.setBounds(10, 10, 290, 30);
+        btn1.setBounds(10, 50, 50, 50);
+        btn2.setBounds(10, 110, 50, 50);
+        btn3.setBounds(10, 170, 50, 50);
+        btn4.setBounds(70,50 , 50, 50);
+        btn5.setBounds(70, 110, 50, 50);
+        btn6.setBounds(70, 170, 50, 50);
+        btn7.setBounds(130, 50, 50, 50);
+        btn8.setBounds(130, 110, 50, 50);
+        btn9.setBounds(130, 170, 50, 50);
+        btn10.setBounds(190, 50, 50, 50);
+        btn11.setBounds(190, 110, 50, 50);
+        btn12.setBounds(190, 170, 50, 50);
+        btn13.setBounds(250, 50, 50, 50);
+        btn14.setBounds(250, 110, 50, 50);
+        btn15.setBounds(250, 170, 50, 50);
+        btn16.setBounds(10, 230, 160, 50);
+        btn17.setBounds(250,230,50,50);
+        btn18.setBounds(190,230,50,50);
 
         add(txt);
         add(btn1);
@@ -66,8 +69,9 @@ public class Calculator2 extends JFrame {
         add(btn15);
         add(btn16);
         add(btn17);
+        add(btn18);
 
-        setSize(400 ,400);
+        setSize(330 ,330);
         setLayout(null);  
         setVisible(true); 
 
@@ -164,7 +168,7 @@ public class Calculator2 extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                
-                first =Double.parseDouble(txt.getText());
+                first =Integer.parseInt(txt.getText());
                 txt.setText("");           
                 op = "*";
 
@@ -177,7 +181,7 @@ public class Calculator2 extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 
-                first =Double.parseDouble(txt.getText());
+                first =Integer.parseInt(txt.getText());
                 txt.setText("");           
                 op = "-";
     
@@ -189,7 +193,7 @@ public class Calculator2 extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 
-                first =Double.parseDouble(txt.getText());
+                first =Integer.parseInt(txt.getText());
                 txt.setText("");           
                 op = "+";
                 }
@@ -199,7 +203,7 @@ public class Calculator2 extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                                
-                first =Double.parseDouble(txt.getText());
+                first =Integer.parseInt(txt.getText());
                 txt.setText("");           
                 op = "/";
 
@@ -221,37 +225,45 @@ public class Calculator2 extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 String ans;
-                secound =Double.parseDouble(txt.getText());
+                secound = Integer.parseInt(txt.getText());
                 if (op=="+") {
                     r=first+secound;
-                    ans = String.format("%,2f", r);
+                    ans = r.toString();
                     txt.setText(ans);
                 }
                 else if (op=="-") {
                     r=first-secound;
-                    ans = String.format("%,2f", r);
+                    ans = r.toString();
                     txt.setText(ans);
                 }
                 else if (op=="*") {
                     r=first*secound;
-                    ans = String.format("%,2f", r);
+                    ans = r.toString();
                     txt.setText(ans);
                 }
                 else if (op=="/") {
                     r=first/secound;
-                    ans = String.format("%,2f", r);
+                    ans = r.toString();
                     txt.setText(ans);
                 }
-           }
-        
-        });
-
-        btn16.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                txt.setText(" ");
-    
+                else if (op=="%") {
+                    r=first%secound;
+                    ans = r.toString();
+                    txt.setText(ans);
+                }
             }
+        
+         });
+
+         btn16.addActionListener(new ActionListener() {
+             @Override
+             public void actionPerformed(ActionEvent e) {
+                 txt.setText("");
+                 first = null;
+                 secound = null;
+                 r = null;
+    
+             }
         });
         btn17.addActionListener(new ActionListener() {
             @Override
@@ -260,6 +272,14 @@ public class Calculator2 extends JFrame {
                 if (backSpace.length() > 0) {
                     txt.setText(backSpace.substring(0, backSpace.length() - 1));
                 }
+            }
+        });
+        btn18.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                first =Integer.parseInt(txt.getText());
+                txt.setText("");           
+                op = "%";
             }
         });
      
