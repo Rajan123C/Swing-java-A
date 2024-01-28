@@ -1,4 +1,6 @@
 import javax.swing.*;
+
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -31,7 +33,7 @@ public class Calculator2 extends JFrame {
         btn16 = new JButton("clear");
         btn17 = new JButton("\uF0E7");
         
-        txt.setBounds(10, 10, 290, 30);
+        txt.setBounds(10, 10, 290, 39);
         btn1.setBounds(10, 50, 50, 50);
         btn2.setBounds(10, 110, 50, 50);
         btn3.setBounds(10, 170, 50, 50);
@@ -41,14 +43,14 @@ public class Calculator2 extends JFrame {
         btn7.setBounds(130, 50, 50, 50);
         btn8.setBounds(130, 110, 50, 50);
         btn9.setBounds(130, 170, 50, 50);
-        btn10.setBounds(190, 50, 50, 50);
+        btn12.setBounds(190, 50, 50, 50);
         btn11.setBounds(190, 110, 50, 50);
-        btn12.setBounds(190, 170, 50, 50);
-        btn13.setBounds(250, 50, 50, 50);
+        btn10.setBounds(190, 170, 50, 50);
+        btn17.setBounds(250, 50, 50, 50);
         btn14.setBounds(250, 110, 50, 50);
         btn15.setBounds(250, 170, 50, 50);
-        btn16.setBounds(10, 230, 160, 50);
-        btn17.setBounds(250,230,50,50);
+        btn16.setBounds(10, 230, 170, 50);
+        btn13.setBounds(250,230,50,50);
         btn18.setBounds(190,230,50,50);
 
         add(txt);
@@ -74,7 +76,8 @@ public class Calculator2 extends JFrame {
         setSize(330 ,330);
         setLayout(null);  
         setVisible(true); 
-
+        
+        btn1.setFont(new Font("Tahoma",Font.BOLD,18));
         btn1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -84,6 +87,7 @@ public class Calculator2 extends JFrame {
                 }
         
         });
+        btn2.setFont(new Font("Tahoma",Font.BOLD,18));
         btn2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -93,7 +97,7 @@ public class Calculator2 extends JFrame {
                 }
         
         });
-
+        btn3.setFont(new Font("Tahoma",Font.BOLD,18));
         btn3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -103,6 +107,7 @@ public class Calculator2 extends JFrame {
                 }
         
         });
+        btn4.setFont(new Font("Tahoma",Font.BOLD,18));
         btn4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -113,6 +118,7 @@ public class Calculator2 extends JFrame {
                 }
         
         });
+        btn5.setFont(new Font("Tahoma",Font.BOLD,18));
         btn5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -123,7 +129,7 @@ public class Calculator2 extends JFrame {
                 }
         
         });
-
+        btn6.setFont(new Font("Tahoma",Font.BOLD,18));
         btn6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -134,6 +140,7 @@ public class Calculator2 extends JFrame {
                 }
         
         });
+        btn7.setFont(new Font("Tahoma",Font.BOLD,18));
         btn7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -144,6 +151,7 @@ public class Calculator2 extends JFrame {
                 }
         
         });
+        btn8.setFont(new Font("Tahoma",Font.BOLD,18));
         btn8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -154,6 +162,7 @@ public class Calculator2 extends JFrame {
                 }
         
         });
+        btn9.setFont(new Font("Tahoma",Font.BOLD,18));
         btn9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -164,6 +173,7 @@ public class Calculator2 extends JFrame {
                 }
         
         });
+        btn10.setFont(new Font("Tahoma",Font.BOLD,18));
         btn10.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -177,10 +187,10 @@ public class Calculator2 extends JFrame {
                 }
         
         });
+        btn11.setFont(new Font("Tahoma",Font.BOLD,18));
         btn11.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
                 first =Integer.parseInt(txt.getText());
                 txt.setText("");           
                 op = "-";
@@ -189,16 +199,18 @@ public class Calculator2 extends JFrame {
                 }
         
         });
+        btn12.setFont(new Font("Tahoma",Font.BOLD,18));
         btn12.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+               
                 first =Integer.parseInt(txt.getText());
                 txt.setText("");           
                 op = "+";
                 }
         
         });
+        btn13.setFont(new Font("Tahoma",Font.BOLD,18));
         btn13.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -210,6 +222,7 @@ public class Calculator2 extends JFrame {
                 }
         
         });
+        btn14.setFont(new Font("Tahoma",Font.BOLD,18));
         btn14.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -220,6 +233,7 @@ public class Calculator2 extends JFrame {
                 }
         
         });
+        btn15.setFont(new Font("Tahoma",Font.BOLD,18));
         btn15.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -254,7 +268,7 @@ public class Calculator2 extends JFrame {
             }
         
          });
-
+         btn16.setFont(new Font("Tahoma",Font.BOLD,18));
          btn16.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
@@ -265,6 +279,7 @@ public class Calculator2 extends JFrame {
     
              }
         });
+        // btn17.setFont(new Font("Tahoma",Font.BOLD,18));
         btn17.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -274,6 +289,7 @@ public class Calculator2 extends JFrame {
                 }
             }
         });
+        // btn18.setFont(new Font("Tahoma",Font.BOLD,18));
         btn18.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
